@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <script type="text/javascript">
+//今日
+//    var now = new Date(); 
+
+
+    var now = new Date();
+    now.setTime(now.getTime() - 28800000);  //8H * 60 * 60 * 1000 --8時間前
+
+
+    var nYear = now.getFullYear();
+    var nMonth = now.getMonth();
+    var nDate = now.getDate();
+//    var nHour = now.getHours();
+//昨日
+    var yesterday = new Date(nYear, nMonth, nDate - 1 , nHour);
+    var yYear = yesterday.getFullYear();
+    var yMonth = yesterday.getMonth();
+    var yDate = yesterday.getDate();
+//    var yHour = yesterday.getHours();
+    document.write('データ取得日：' + yYear + '年' + (yMonth + 1) + '月' + yDate + '日');
+    </script>
+  </body>
+</html>
